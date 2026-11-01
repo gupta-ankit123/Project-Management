@@ -19,7 +19,7 @@ export const useDeleteWorkspace = () => {
             mutationFn: async ({ param }) => {
                 const response = await client.api.workspaces[":workspaceId"]["$delete"]({ param })
                 if (!response.ok) {
-                    throw new Error("Failed to Delete a WOrkspace")
+                    throw new Error("Failed to Delete a Workspace")
                 }
                 return await response.json()
 
